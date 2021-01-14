@@ -1,0 +1,9 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/machine-learning-sascha/sentiment-training', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/machine-learning-sascha/sentiment-training']
+images:
+- gcr.io/machine-learning-sascha/sentiment-training

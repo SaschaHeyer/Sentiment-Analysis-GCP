@@ -1,0 +1,17 @@
+steps:
+# Download the model to embed it into the image
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp','-r', 'gs://machine-learning-samples/models/sentiment/model', '.']
+  id: 'download-model'
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/machine-learning-sascha/sentiment', '.']
+  waitFor: ['download-model']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/machine-learning-sascha/sentiment']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'sentiment', '--image', 'gcr.io/machine-learning-sascha/sentiment', '--region', 'europe-north1', '--platform', 'managed', '--memory', '2000Mi', '--allow-unauthenticated', '--max-instances', '5']
+images:
+- gcr.io/machine-learning-sascha/sentiment
