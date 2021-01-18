@@ -1,6 +1,6 @@
 # Unexpected easy Sentiment Analysis using BERT on Google Cloud Platform
 
-This repository contains the code for the DoiT blog article (link will be added soon) 
+This repository contains the demo code for the DoiT blog article (link will be added soon) 
 
 ## What is covered
 As part of this article, we train and deploy a serverless Sentiment Analysis API to GCP by using BERT, TensorFlow, FastAPI, Python, Google AI Platform Training, Google Storage, Cloud Build, Cloud Container Registry, and Cloud Run.
