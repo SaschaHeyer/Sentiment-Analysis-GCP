@@ -1,0 +1,12 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/machine-learning-sascha/sentiment-app', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/machine-learning-sascha/sentiment-app']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'sentiment-app', '--image', 'gcr.io/machine-learning-sascha/sentiment-app', '--region', 'us-east1', '--platform', 'managed', '--memory', '2000Mi', '--allow-unauthenticated', '--max-instances', '5']
+images:
+- gcr.io/machine-learning-sascha/sentiment-app

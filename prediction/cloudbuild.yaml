@@ -12,6 +12,6 @@ steps:
   args: ['push', 'gcr.io/machine-learning-sascha/sentiment']
 # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'sentiment', '--image', 'gcr.io/machine-learning-sascha/sentiment', '--region', 'europe-north1', '--platform', 'managed', '--memory', '2000Mi', '--allow-unauthenticated', '--max-instances', '5']
+  args: ['run', 'deploy', 'sentiment', '--image', 'gcr.io/machine-learning-sascha/sentiment', '--region', 'us-east1', '--platform', 'managed', '--memory', '3000Mi', '--allow-unauthenticated', '--max-instances', '5']
 images:
 - gcr.io/machine-learning-sascha/sentiment
