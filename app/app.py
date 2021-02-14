@@ -15,7 +15,7 @@ def getPrediction(text):
 
 st.title('Sentiment Analysis')
 st.write('Sentiment Analysis takes the text and identifies the emotional meanings behind it. This is useful in situations such as identifying negative support requests, analyzing how people feel about your brand or product, and better understanding customer needs in general.')
-
+st.markdown('The model training and prediction code is covered in the corresponding GitHub repository https://github.com/SaschaHeyer/Sentiment-Analysis-GCP.')
 text_input = st.text_area('Text:')
 
 st.write("The first request might take a while (service scales to zero). Subsequent requests are faster.")
