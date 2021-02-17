@@ -8,7 +8,7 @@ from transformers import DistilBertTokenizerFast
 from transformers import TFDistilBertForSequenceClassification
 
 app = FastAPI(title="Sentiment Analysis")
-tokenizer = DistilBertTokenizerFast.from_pretrained("bert-base-uncased")
+tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-uncased")
 
 
 print('load model')
