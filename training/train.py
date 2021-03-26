@@ -65,12 +65,6 @@ def train():
     upload_blob('machine-learning-samples',
                 './sentiment/tf_model.h5', 'models/sentiment/tf_model.h5')
 
-# train
-
-# monitoring (check how this is supported by AWS)
-
-# save model model.save of TensorFlow supports AWS S3 and GCP Buckets
-
 
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
     """Uploads a file to the bucket."""
