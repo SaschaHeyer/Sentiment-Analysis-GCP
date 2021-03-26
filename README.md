@@ -2,6 +2,7 @@
 
 This repository contains the demo code for the [DoiT blog article](https://blog.doit-intl.com/performing-surprisingly-easy-sentiment-analysis-on-google-cloud-platform-fc26b2e2b4b).
 
+For a demo head over to [https://sentiment.practical-machine-learning.com/](https://sentiment.practical-machine-learning.com/)
 ## What is covered
 As part of this article, we train and deploy a serverless Sentiment Analysis API to GCP by using BERT, TensorFlow, FastAPI, Python, Google AI Platform Training, Google Storage, Cloud Build, Cloud Container Registry, and Cloud Run.
 
